@@ -1,4 +1,4 @@
-# FULL_ADDER_SUBTRACTOR
+#  EXPERIMENT NO: 3 FULL_ADDER_SUBTRACTOR
 
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
 
@@ -39,17 +39,57 @@ Borrow out = A'Bin + A'B + BBin
 **Truthtable**
 
 **Procedure**
+### FULL ADDER:
+1. Inputs: a, b, c (carry-in)  
+2. Outputs: s (sum), cout (carry-out)  
+3. Calculate sum (s) as the XOR of a, b, and c.  
+4. Calculate carry-out (cout) as the OR of all possible combinations of two inputs.
 
-Write the detailed procedure here
+### FULL SUBRACTOR:
+1. Inputs: a, b, c
+2. Outputs: d (result), bout (borrow-out)
+3. Calculate result (d) as the XOR of a, b, and c.
+4. Calculate borrow-out (bout) as the OR of all possible combinations of two inputs with one inverted.
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+ Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.  
+ Developed by:ARCHANA T  
+ RegisterNumber:212223240013
+## FULL ADDER:
+module fadd(a,b,c,s,cout);   
+input a;  
+input b;   
+input c; output s;   
+output cout;  
+assign s = (a ^ b) ^ c;  
+assign cout = (a & b)|( b & c)|(c & a);   
+endmodule  
 
 **RTL Schematic**
+![DG fulladd](https://github.com/ARCHANAT1305/FULL_ADDER_SUBTRACTOR/assets/145975189/37558a06-567d-4274-8f34-2e167c16bb2a)
+
 
 **Output Timing Waveform**
+![DG fulladd waveform](https://github.com/ARCHANAT1305/FULL_ADDER_SUBTRACTOR/assets/145975189/ac3dfe82-2a61-4bb7-b02d-7aefb57e7a19)
+
+## FULL SUBRACTOR:
+
+ input a;  
+ input b;  
+ input c;  
+ output d;   
+ output bout;   
+ assign d = (a ^ b) ^ c;   
+ assign bout = (~a & b)|( b & c)|(c & ~a);   
+endmodule   
+
+**RTL Schematic**
+![image](https://github.com/ARCHANAT1305/FULL_ADDER_SUBTRACTOR/assets/145975189/64f4b63b-4a5b-41cb-b6a3-5e925b131e71)
+
+**Output Timing Waveform**
+![DG fullsub waveform](https://github.com/ARCHANAT1305/FULL_ADDER_SUBTRACTOR/assets/145975189/3da9804c-344d-4801-a2a4-6c9d19f98d8b)
+
 
 **Result:**
 

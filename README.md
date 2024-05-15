@@ -1,5 +1,5 @@
 ## DATE: 
-#  EXPERIMENT NO: 3 FULL_ADDER_SUBTRACTOR
+#  EXPERIMENT NO: 4 FULL_ADDER_SUBTRACTOR
 
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
 
